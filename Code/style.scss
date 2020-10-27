@@ -7521,9 +7521,6 @@ $local-collection-header-offset: (100% - $local-collection-image-width - $local-
     font-size: $font-size-x-large;
   }
 
-  @include media($min: $bp-large) {
-    font-size: $font-size-xx-large;
-  }
 }
 
 .collection-utils-wide {
@@ -14580,7 +14577,7 @@ $local-header-icon-cart-dur-half: #{$transition-duration * 5/8 / 2};
   .navmenu-link-depth-1 {
 
     @include media($max: $bp-medium) {
-      @include font($font-header, $font-weight: bolder, $font-family: false);
+      @include font($font-header, $font-weight: 500, $font-family: false);
     }
 
     @include media($min: $bp-medium) {
@@ -15665,5 +15662,50 @@ $local-button-size-large: 90px;
   z-index: 0;
   display: inline-block;
   margin-top: -1 * nth($pattern-size-small, 2) / 2;
+}
+
+
+
+// CUSTOM CSS OVERIDES
+.site-header-utility-link, .site-header-action-link, .site-header-navigation .navmenu-link, .site-header-action-text {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.navmenu-icon,  {
+    top: 35%;
+    transform: scale(0.4);
+    opacity: 0.85;
+  }
+
+  .site-header-action-icon .site-header-icon-normal {
+    transform: scale(0.8);
+  }
+
+  .collection-header-title, .page-title {
+    font-size: $font-size-large;
+  
+    @include media($min: $bp-medium) {
+      font-size: $font-size-large;
+    }
+  
+  }
+
+  
+.collection-header-title {
+    margin-bottom: 0;
+    line-height: 1.3;
+  
+  }
+
+
+  // hero slider arrows 
+
+  .slideshow-pagination-prev .slideshow-pagination-icon {
+    transform: rotate(180deg) scale(2.5);
+  }
+
+  .slideshow-pagination-next .slideshow-pagination-icon {
+    transform: scale(2.5);
 }
 
