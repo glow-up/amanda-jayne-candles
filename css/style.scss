@@ -76,9 +76,13 @@ p {
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
+        .cta-primary:nth-child(1) {
+                padding: 15px 30px;
+        }
 
         >a {
             margin: 10px
+
         }
     }
 }
