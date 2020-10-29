@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap");
 #main,
 #main * {
   margin: 0;
@@ -7,22 +8,21 @@
 }
 
 #main {
+  position: fixed;
   font-size: 18px;
   font-weight: 300;
-  width: 100%;
   height: 100%;
-  height: 100vh;
-  width: 100vw;
-  background: url("../images/an-image-of-one-of-the-candles.jpg") no-repeat center;
-  background-size: cover;
-  color: #27211C;
+  width: 100%;
+
 }
 
 #main h1 {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 26px;
   line-height: 150%;
+  color: #27211C;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 #main p {
@@ -31,6 +31,7 @@
   font-size: 18px;
   line-height: 120%;
   color: #27211C;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 #main .cta-primary {
@@ -70,7 +71,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   border-radius: 15px;
   max-width: 600px;
   width: auto;
@@ -109,4 +110,4 @@
 #main .popup-box .cta-container > a {
   margin: 10px;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=store.css.map */

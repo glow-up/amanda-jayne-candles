@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&display=swap');
 #main,
 #main * {
     margin: 0;
@@ -6,20 +7,17 @@
 }
 
 #main {
+    position: fixed;
     font-size: 18px;
     font-weight: 300;
-    width: 100%;
     height: 100%;
-    height: 100vh;
-    width: 100vw;
-    background: url('../images/an-image-of-one-of-the-candles.jpg') no-repeat center;
-    background-size: cover;
+    width: 100%;
     color: #27211C;
 
 
     h1 {
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 26px;
         line-height: 150%;
     }
@@ -59,7 +57,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: relative;
         border-radius: 15px;
         max-width: 600px;
         width: auto;
