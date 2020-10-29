@@ -1,62 +1,17 @@
-#main,
-#main * {
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap");
+* {
   margin: 0;
+  padding: 0;
+  color: #272727;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif;
 }
 
 #main {
-  font-size: 18px;
-  font-weight: 300;
-  width: 100%;
-  height: 100%;
-  height: 100vh;
   width: 100vw;
-  background: url("../images/an-image-of-one-of-the-candles.jpg") no-repeat center;
-  background-size: cover;
-  color: #27211C;
-}
-
-#main h1 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 26px;
-  line-height: 150%;
-}
-
-#main p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 120%;
-  color: #27211C;
-}
-
-#main .cta-primary {
-  display: inline-block;
-  border-radius: 30px;
-  padding: 15px 20px;
-  background: #D8CAB3;
-  -webkit-transition: background-color 200ms ease;
-  transition: background-color 200ms ease;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#main .cta-primary > :nth-child(1) {
-  margin-right: 15px;
-}
-
-#main .cta-primary:hover {
-  background: #8B551D;
-}
-
-#main .popup-box {
-  text-align: center;
-  background: #ffffff;
-  padding: 45px 50px 30px;
+  height: 100vh;
+  padding: 5%;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,23 +25,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  border-radius: 15px;
-  max-width: 600px;
-  width: auto;
-  min-width: 400px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  place-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
 }
 
-#main .popup-box h1 {
-  margin-bottom: 10px;
+#main a {
+  text-decoration: none;
 }
 
-#main .popup-box .cta-container {
-  margin-top: 30px;
+#main p {
+  font-size: 24px;
+  text-align: center;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+#main p .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,13 +55,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  place-items: center;
 }
 
-#main .popup-box .cta-container .cta-primary:nth-child(1) {
-  padding: 15px 30px;
+#main p .flex strong {
+  margin: 20px;
 }
 
-#main .popup-box .cta-container > a {
-  margin: 10px;
+#main p .flex img {
+  width: 24px;
+  height: 24px;
 }
 /*# sourceMappingURL=style.css.map */
