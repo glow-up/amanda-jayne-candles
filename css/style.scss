@@ -2,39 +2,75 @@
     display: none !important;
 }
 
+$main: #a17c5e;
+$main-dark: #8B551D;
+$black: rgb(89, 89, 89);
+$sblack: rgb(36, 36, 36);
+$white: #ffffff;
+
 #main,
-#main *, * {
+#main *,
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
+}
+
+body {
+    background: $white;
 }
 
 #main {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     width: 100%;
     height: 100%;
     height: 100vh;
     width: 100vw;
-    background: url('../images/an-image-of-one-of-the-candles.jpg') no-repeat center;
+    background: url('../images/an-image-of-some-essential-oils.jpg');
+    -webkit-transition: background-image 0.4s ease-in-out;
+    -moz-transition: background-image 0.4s ease-in-out;
+    transition: background-image 0.4s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    color: #27211C;
+    color: $black;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        width: 100vw;
+        z-index: 5;
+        background-color: $main-dark;
+        opacity: 0;
+        transition: opacity 300ms ease;
+    }
+
+    &.hover {
+        &::before {
+            opacity: 0.1;
+        }
+    }
 
 
     h1 {
         font-style: normal;
-        font-weight: 600;
-        font-size: 26px;
+        font-weight: 400;
+        font-size: 20px;
         line-height: 150%;
+        color: $main;
+        text-transform: uppercase;
     }
 
     p {
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 120%;
-        color: #27211C;
     }
 
     .cta-primary {
@@ -43,7 +79,7 @@
         padding: 15px 20px;
         background: #D8CAB3;
         transition: background-color 200ms ease;
-        color: #ffffff;
+        color: $white;
         text-decoration: none;
         cursor: pointer;
 
@@ -52,13 +88,17 @@
         }
 
         &:hover {
-            background: #8B551D;
+            background: $main-dark;
+        }
+
+        &:focus {
+            outline: 1px solid $main;
         }
     }
 
     .popup-box {
         text-align: center;
-        background: #ffffff;
+        background: $white;
         padding: 45px 50px 30px;
         display: flex;
         flex-direction: column;
@@ -72,6 +112,24 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+        z-index: 10;
+        border: 0px solid;
+        transition: transform 200ms ease;
+
+        &.hover {
+            filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+            transform: translateX(-50%) translateY(-50%) scale(1.005);
+            transition-delay: 150ms;
+        }
+
+        @supports(backdrop-filter: opacity(1.0)) {
+            & {
+                background: $white;
+                backdrop-filter: blur(104px);
+                filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+                color: $sblack;
+            }
+        }
 
         h1 {
             margin-bottom: 10px;
@@ -90,6 +148,35 @@
 
             >a {
                 margin: 10px
+            }
+        }
+    }
+
+    #navdots {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+
+        li.dots {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: $main;
+            transition: background-color 200ms ease;
+            margin: 0 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: $main-dark;
+            }
+
+            &.active,
+            &:active {
+                background: $white;
             }
         }
     }

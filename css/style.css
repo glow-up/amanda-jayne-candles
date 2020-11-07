@@ -3,39 +3,67 @@
 }
 
 #main,
-#main *, * {
+#main *,
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
+}
+
+body {
+  background: #ffffff;
 }
 
 #main {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 400;
   width: 100%;
   height: 100%;
   height: 100vh;
   width: 100vw;
-  background: url("../images/an-image-of-one-of-the-candles.jpg") no-repeat center;
+  background: url("../images/an-image-of-some-essential-oils.jpg");
+  -webkit-transition: background-image 0.4s ease-in-out;
+  transition: background-image 0.4s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  color: #27211C;
+  color: #595959;
+}
+
+#main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: #8B551D;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+#main.hover::before {
+  opacity: 0.1;
 }
 
 #main h1 {
   font-style: normal;
-  font-weight: 600;
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 20px;
   line-height: 150%;
+  color: #a17c5e;
+  text-transform: uppercase;
 }
 
 #main p {
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 120%;
-  color: #27211C;
 }
 
 #main .cta-primary {
@@ -56,6 +84,10 @@
 
 #main .cta-primary:hover {
   background: #8B551D;
+}
+
+#main .cta-primary:focus {
+  outline: 1px solid #a17c5e;
 }
 
 #main .popup-box {
@@ -84,6 +116,32 @@
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+  border: 0px solid;
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+#main .popup-box.hover {
+  -webkit-filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.005);
+          transform: translateX(-50%) translateY(-50%) scale(1.005);
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+@supports ((-webkit-backdrop-filter: opacity(1)) or (backdrop-filter: opacity(1))) {
+  #main .popup-box {
+    background: #ffffff;
+    -webkit-backdrop-filter: blur(104px);
+            backdrop-filter: blur(104px);
+    -webkit-filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
+    color: #242424;
+  }
 }
 
 #main .popup-box h1 {
@@ -113,5 +171,37 @@
 
 #main .popup-box .cta-container > a {
   margin: 10px;
+}
+
+#main #navdots {
+  position: absolute;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 20;
+}
+
+#main #navdots li.dots {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #a17c5e;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#main #navdots li.dots:hover {
+  background: #8B551D;
+}
+
+#main #navdots li.dots.active, #main #navdots li.dots:active {
+  background: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
