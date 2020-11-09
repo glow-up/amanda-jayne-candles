@@ -124,6 +124,14 @@ body {
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
+@media only screen and (max-width: 450px) {
+  #main .popup-box {
+    width: 90%;
+    min-width: auto;
+    padding: 45px 5% 30px;
+  }
+}
+
 #main .popup-box.hover {
   -webkit-filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
