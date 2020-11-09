@@ -29,7 +29,7 @@ body {
     height: 100%;
     height: 100vh;
     width: 100vw;
-    background: url('../images/an-image-of-some-essential-oils.jpg');
+    background: url('../images/Greenhouse_Fragrance_image.jpg');
     -webkit-transition: background-image 0.4s ease-in-out;
     -moz-transition: background-image 0.4s ease-in-out;
     transition: background-image 0.4s ease-in-out;
@@ -76,7 +76,9 @@ body {
     }
 
     .cta-primary {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 0;
         padding: 15px 20px;
         background: $white;
@@ -143,10 +145,8 @@ body {
 
         @supports(backdrop-filter: opacity(1.0)) {
             & {
-                background: $white;
                 backdrop-filter: blur(104px);
                 filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
-                color: $sblack;
             }
         }
 
@@ -168,7 +168,8 @@ body {
         .cta-container {
             margin-top: 30px;
             display: flex;
-            flex-flow: row wrap;
+            flex-direction: column;
+            flex-flow: column wrap;
             justify-content: center;
             align-items: center;
 

@@ -5,37 +5,37 @@ var container = document.querySelector('#main');
 var popUpContainer = document.querySelector('.popup-box');
 var closeIcon = document.querySelector('.close-icon');
 
-var bgimages = {
-    current: 0,
-    locations: new Array,
-    amount() { return this.locations.length; },
-    createDots() {
-        var navDotsContainer = document.createElement('ul');
-        navDotsContainer.id = 'navdots';
+// var bgimages = {
+//     current: 0,
+//     locations: new Array,
+//     amount() { return this.locations.length; },
+//     createDots() {
+//         var navDotsContainer = document.createElement('ul');
+//         navDotsContainer.id = 'navdots';
 
-        navDotsContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('dots')) {
-                // GET THE DOTS POSITION
-                //source: https://stackoverflow.com/questions/13656921/fastest-way-to-find-the-index-of-a-child-node-in-parent
-                var position = [].indexOf.call(e.target.parentNode.children, e.target);
+//         navDotsContainer.addEventListener('click', (e) => {
+//             if (e.target.classList.contains('dots')) {
+//                 // GET THE DOTS POSITION
+//                 //source: https://stackoverflow.com/questions/13656921/fastest-way-to-find-the-index-of-a-child-node-in-parent
+//                 var position = [].indexOf.call(e.target.parentNode.children, e.target);
 
-                changeBG(position);
-            }
-        });
+//                 changeBG(position);
+//             }
+//         });
 
-        var n = 0;
-        for (n = 0; n < this.amount(); n++) {
-            var dot = document.createElement('li');
-            dot.className = 'dots';
-            navDotsContainer.appendChild(dot);
-        }
-        container.appendChild(navDotsContainer);
-    }
-}
+//         var n = 0;
+//         for (n = 0; n < this.amount(); n++) {
+//             var dot = document.createElement('li');
+//             dot.className = 'dots';
+//             navDotsContainer.appendChild(dot);
+//         }
+//         container.appendChild(navDotsContainer);
+//     }
+// }
 
-bgimages.locations.push('../images/an-image-of-some-essential-candles.jpg',
-    '../images/an-image-of-some-essential-oils.jpg',
-    '../images/an-image-of-some-essential-oils2.jpg');
+// bgimages.locations.push('../images/an-image-of-some-essential-candles.jpg',
+//     '../images/an-image-of-some-essential-oils.jpg',
+//     '../images/an-image-of-some-essential-oils2.jpg');
 
 
 popUpContainer.addEventListener('mouseenter', e => {
@@ -59,49 +59,49 @@ closeIcon.addEventListener('click', e => {
     window.open("https://sa.amandajaynecandles.com/", "_self" ); 
 });
 
-function changeBG(number) {
-    if (number || number === 0) {
+// function changeBG(number) {
+//     if (number || number === 0) {
 
-        if (bgimages.current >= bgimages.amount()) {
-            bgimages.current = 0;
+//         if (bgimages.current >= bgimages.amount()) {
+//             bgimages.current = 0;
 
-        } else {
-            bgimages.current++;
-        }
+//         } else {
+//             bgimages.current++;
+//         }
 
-        container.style.backgroundImage = `url(${bgimages.locations[number]})`;
-        updateNavDots(bgimages.current);
-
-
-    } else if (bgimages.current < bgimages.amount()) {
-        container.style.backgroundImage = `url(${bgimages.locations[bgimages.current]})`;
-        bgimages.current++
-
-        if (bgimages.current >= bgimages.amount()) {
-            bgimages.current = 0;
-        }
-        updateNavDots(bgimages.current)
-    } else {
-        bgimages.current = 0;
-        container.style.backgroundImage = `url(${bgimages.locations[bgimages.current]})`;
-        updateNavDots(bgimages.current)
-    }
-
-}
-
-function updateNavDots(number) {
-    var navDots = document.querySelectorAll('.dots');
-    var currentlyActive = document.querySelector('.dots.active');
-
-    if (currentlyActive) { currentlyActive.classList.remove('active'); }
-    navDots[number].classList.add('active');
-
-    console.log(bgimages.current)
-}
-
-bgimages.createDots();
-
-changeBG(0);
+//         container.style.backgroundImage = `url(${bgimages.locations[number]})`;
+//         updateNavDots(bgimages.current);
 
 
-setInterval(function () { changeBG(false) }, 4000);
+//     } else if (bgimages.current < bgimages.amount()) {
+//         container.style.backgroundImage = `url(${bgimages.locations[bgimages.current]})`;
+//         bgimages.current++
+
+//         if (bgimages.current >= bgimages.amount()) {
+//             bgimages.current = 0;
+//         }
+//         updateNavDots(bgimages.current)
+//     } else {
+//         bgimages.current = 0;
+//         container.style.backgroundImage = `url(${bgimages.locations[bgimages.current]})`;
+//         updateNavDots(bgimages.current)
+//     }
+
+// }
+
+// function updateNavDots(number) {
+//     var navDots = document.querySelectorAll('.dots');
+//     var currentlyActive = document.querySelector('.dots.active');
+
+//     if (currentlyActive) { currentlyActive.classList.remove('active'); }
+//     navDots[number].classList.add('active');
+
+//     console.log(bgimages.current)
+// }
+
+// bgimages.createDots();
+
+// changeBG(0);
+
+
+// setInterval(function () { changeBG(false) }, 4000);

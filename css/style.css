@@ -24,7 +24,7 @@ body {
   height: 100%;
   height: 100vh;
   width: 100vw;
-  background: url("../images/an-image-of-some-essential-oils.jpg");
+  background: url("../images/Greenhouse_Fragrance_image.jpg");
   -webkit-transition: background-image 0.4s ease-in-out;
   transition: background-image 0.4s ease-in-out;
   background-repeat: no-repeat;
@@ -69,7 +69,15 @@ body {
 }
 
 #main .cta-primary {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0;
   padding: 15px 20px;
   background: #ffffff;
@@ -154,12 +162,10 @@ body {
 
 @supports ((-webkit-backdrop-filter: opacity(1)) or (backdrop-filter: opacity(1))) {
   #main .popup-box {
-    background: #ffffff;
     -webkit-backdrop-filter: blur(104px);
             backdrop-filter: blur(104px);
     -webkit-filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
             filter: drop-shadow(-11.0895px 10.2974px 36.437px rgba(0, 0, 0, 0.25));
-    color: #242424;
   }
 }
 
@@ -188,10 +194,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
