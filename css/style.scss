@@ -84,6 +84,7 @@ body {
         color: $main;
         text-decoration: none;
         text-transform: uppercase;
+        letter-spacing: 1.3px;
         cursor: pointer;
 
         > :nth-child(1) {
@@ -94,6 +95,7 @@ body {
         &:hover {
             background: $main;
             color: $white;
+
             > :nth-child(1) {
                 margin-right: 25px;
             }
@@ -114,17 +116,18 @@ body {
         align-items: center;
         position: absolute;
         border-radius: 0;
-        max-width: 600px;
+        max-width: 450px;
         width: auto;
-        min-width: 400px;
+        min-width: 350px;
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         z-index: 10;
         border: 0px solid;
         transition: transform 200ms ease;
+
         @media only screen and (max-width: 450px) {
-            &{
+            & {
                 width: 90%;
                 min-width: auto;
                 padding: 45px 5% 30px;
@@ -147,6 +150,17 @@ body {
             }
         }
 
+        .close-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+            transition: transform 200ms ease;
+            &:hover{
+                transform: rotate(2deg) scale(1.1);
+            }
+        }
+
         h1 {
             margin-bottom: 10px;
         }
@@ -159,11 +173,12 @@ body {
             align-items: center;
 
             .cta-primary:nth-child(1) {
-                padding: 15px 30px;
+                padding: 15px 35px;
+                margin: 0  0 20px;
             }
 
             >a {
-                margin: 10px
+                
             }
         }
     }

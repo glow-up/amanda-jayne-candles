@@ -3,6 +3,7 @@
 
 var container = document.querySelector('#main');
 var popUpContainer = document.querySelector('.popup-box');
+var closeIcon = document.querySelector('.close-icon');
 
 var bgimages = {
     current: 0,
@@ -52,6 +53,10 @@ popUpContainer.addEventListener('mouseleave', e => {
         // REMOVE CLASS TO THE BOX
         popUpContainer.classList.remove('hover');
     }
+});
+
+closeIcon.addEventListener('click', e => {
+    window.open("https://sa.amandajaynecandles.com/", "_self" ); 
 });
 
 function changeBG(number) {
