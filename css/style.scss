@@ -92,7 +92,7 @@ body {
             transition: margin 200ms ease;
         }
 
-        &:hover {
+        &:hover, &:active {
             background: $main;
             color: $white;
 

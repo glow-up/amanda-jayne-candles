@@ -88,12 +88,12 @@ body {
   transition: margin 200ms ease;
 }
 
-#main .cta-primary:hover {
+#main .cta-primary:hover, #main .cta-primary:active {
   background: #a17c5e;
   color: #ffffff;
 }
 
-#main .cta-primary:hover > :nth-child(1) {
+#main .cta-primary:hover > :nth-child(1), #main .cta-primary:active > :nth-child(1) {
   margin-right: 25px;
 }
 
