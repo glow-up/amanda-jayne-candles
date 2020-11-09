@@ -30,7 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #595959;
+  color: #d0beaf;
 }
 
 #main::before {
@@ -56,7 +56,8 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
-  color: #a17c5e;
+  letter-spacing: 4.4px;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -69,22 +70,30 @@ body {
 
 #main .cta-primary {
   display: inline-block;
-  border-radius: 30px;
+  border-radius: 0;
   padding: 15px 20px;
-  background: #D8CAB3;
+  background: #ffffff;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
-  color: #ffffff;
+  color: #a17c5e;
   text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 #main .cta-primary > :nth-child(1) {
   margin-right: 15px;
+  -webkit-transition: margin 200ms ease;
+  transition: margin 200ms ease;
 }
 
 #main .cta-primary:hover {
-  background: #8B551D;
+  background: #a17c5e;
+  color: #ffffff;
+}
+
+#main .cta-primary:hover > :nth-child(1) {
+  margin-right: 25px;
 }
 
 #main .cta-primary:focus {
@@ -93,8 +102,8 @@ body {
 
 #main .popup-box {
   text-align: center;
-  background: #ffffff;
-  padding: 45px 50px 30px;
+  background: #8B551D;
+  padding: 60px 50px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +118,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  border-radius: 15px;
+  border-radius: 0;
   max-width: 600px;
   width: auto;
   min-width: 400px;
@@ -199,7 +208,8 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #a17c5e;
+  background: transparent;
+  border: 2px solid #ffffff;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
   margin: 0 10px;
