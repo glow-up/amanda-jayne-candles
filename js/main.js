@@ -56,7 +56,7 @@ popUpContainer.addEventListener('mouseleave', e => {
 });
 
 closeIcon.addEventListener('click', e => {
-    window.open("https://sa.amandajaynecandles.com/", "_self" ); 
+    window.open("https://sa.amandajaynecandles.com/", "_self");
 });
 
 // function changeBG(number) {
@@ -105,3 +105,18 @@ closeIcon.addEventListener('click', e => {
 
 
 // setInterval(function () { changeBG(false) }, 4000);
+
+
+
+
+// OPEN STORE LINKS ON 404
+(function openStoreLink(store) {
+    var saBtn = document.querySelector('#sa');
+    var ukBtn = document.querySelector('#sa');
+
+    if (saBtn || ukBtn) {
+        var url = window.location.replace('http://127.0.0.1:5500/', '');
+        console.log(url);
+        alert(1)
+    }
+}()) 
